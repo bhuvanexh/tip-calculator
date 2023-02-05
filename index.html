@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tips</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section>
+        <div class="left">
+            <div class="first">
+                <label for="bill">
+                    Bill <img src="./images/icon-dollar.svg" alt="">
+                </label>
+                <input type="text"
+                    onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))"
+                    id="bill" name="bill">
+            </div>
+            <small id="first" class="hide">Bill should be greater than 0</small>
+            <div class="sec">
+                <span id="select">Select tip %</span>
+                <!-- <div class="radios"> -->
+                <label class="radL">
+                    <input type="radio" name="perc" value="5">
+                    <span>5%</span>
+                </label>
+                <label class="radL">
+                    <input type="radio" name="perc" value="10">
+                    <span>10%</span>
+                </label>
+                <label class="radL checked">
+                    <input type="radio" name="perc" value="15" checked>
+                    <span>15%</span>
+                </label>
+                <label class="radL">
+                    <input type="radio" name="perc" value="25">
+                    <span>25%</span>
+                </label>
+                <label class="radL">
+                    <input type="radio" name="perc" value="50">
+                    <span>50%</span>
+                </label>
+                <label class="radL">
+                    <input type="radio" name="perc" value="0">
+                    <input type="text"
+                        onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))"
+                        id="custom" placeholder="Custom(%)">
+                </label>
+                <!-- <input type="text" placeholder="Custom"> -->
+            </div>
+            <small id="second" class="hide">tip percent should be a positive no.</small>
+            <!-- </div> -->
+            <div class="third">
+                <label for="people">Number of People <img src="./images/icon-person.svg" alt=""></label>
+                <input type="text"
+                    onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))"
+                    id="people" name="people">
+
+            </div>
+            <small id="third" class="hide">no. of people should be greater than 0</small>
+        </div>
+        <div class="right">
+            <label>Tip Amount
+                <span>/person</span>
+            </label>
+            <h1 id="show">$0.00</h1>
+            <label>Total
+                <span>/person</span>
+            </label>
+            <h1 id="total">$0.00</h1>
+            <button id="reset">RESET</button>
+        </div>
+
+
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>
